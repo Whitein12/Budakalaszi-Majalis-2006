@@ -6,9 +6,7 @@ if len(sys.argv) != 4:
     print("Usage: python Notif_script.py [job_name] [server_name] [user_name]")
     sys.exit(1)
 
-job_name=sys.argv[1]
-if job_name.endswith(".inp"):
-    job_name=job_name.removesuffix('.inp')
+job_name=sys.argv[1].rstrip('.inp')
 server_name=sys.argv[2]
 user_name=sys.argv[3]
 
